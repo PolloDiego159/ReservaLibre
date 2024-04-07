@@ -2,15 +2,22 @@ package com.example.intentovacio.Domain;
 
 import java.io.Serializable;
 
+
 public class ListDomain implements Serializable {
     private String title;
     private String Stock;
     private String Estado;
 
-    public ListDomain(String title, String stock, String estado) {
+    private String PicUrl;
+
+    private int code;
+
+    public ListDomain(String title, String stock, String estado, String PicUrl) {
         this.title = title;
-        Stock = stock;
-        Estado = estado;
+        this.Stock = stock;
+        this.Estado = estado;
+        this.PicUrl = PicUrl;
+
     }
 
     public String getTitle() {
@@ -37,5 +44,19 @@ public class ListDomain implements Serializable {
         Estado = estado;
     }
 
+    public String getPicUrl() {
+        return PicUrl;
+    }
 
+    public void setPicUrl(String picUrll) {
+        PicUrl = picUrll;
+    }
+
+    public int getCode() {
+        return code;
+    }
+
+    public void setCode(int code) {
+        this.code = code;
+    }
 }
