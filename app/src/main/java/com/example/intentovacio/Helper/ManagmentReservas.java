@@ -41,7 +41,7 @@ public class ManagmentReservas {
         tinyDB.putListObject("Reservas", listPop);
         Toast.makeText(context, "Reserva realizada", Toast.LENGTH_SHORT).show();
     }
-    private ArrayList<ListDomain> getListReservas(){
+    public ArrayList<ListDomain> getListReservas(){
         return tinyDB.getListObject("Reservas");
 
     }

@@ -1,5 +1,7 @@
 package com.example.intentovacio.Domain;
 
+import android.util.EventLogTags;
+
 import java.io.Serializable;
 
 
@@ -7,16 +9,23 @@ public class ListDomain implements Serializable {
     private String title;
     private String Stock;
     private String Estado;
+    private String Descripcion;
 
     private String PicUrl;
-
+    private String score;
+    private String Horario;
+    private String Ubicacion;
     private int code;
 
-    public ListDomain(String title, String stock, String estado, String PicUrl) {
+    public ListDomain(String title, String descripcion, String stock,  String estado, String PicUrl,String score ,String Horario, String Ubicado) {
         this.title = title;
         this.Stock = stock;
         this.Estado = estado;
         this.PicUrl = PicUrl;
+        this.Descripcion = descripcion;
+        this.Horario = Horario;
+        this.Ubicacion = Ubicacion;
+        this.score = score;
 
     }
 
@@ -48,8 +57,8 @@ public class ListDomain implements Serializable {
         return PicUrl;
     }
 
-    public void setPicUrl(String picUrll) {
-        PicUrl = picUrll;
+    public void setPicUrl(String picUrl) {
+        PicUrl = picUrl;
     }
 
     public int getCode() {
@@ -58,5 +67,37 @@ public class ListDomain implements Serializable {
 
     public void setCode(int code) {
         this.code = code;
+    }
+
+    public String getDescripcion() {
+        return Descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        Descripcion = descripcion;
+    }
+
+    public String getScore() {
+        return score;
+    }
+
+    public void setScore(String score) {
+        this.score = score;
+    }
+
+    public String getHorario() {
+        return Horario;
+    }
+
+    public void setHorario(String horario) {
+        Horario = horario;
+    }
+
+    public String getUbicacion() {
+        return Ubicacion;
+    }
+
+    public void setUbicacion(String ubicacion) {
+        Ubicacion = ubicacion;
     }
 }

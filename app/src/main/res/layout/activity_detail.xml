@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent">
 
     <ScrollView
@@ -21,7 +21,7 @@
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:id="@+id/imageView"
+                    android:id="@+id/BackBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -39,11 +39,11 @@
                     android:background="@drawable/grey_backgroud"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView" />
+                    app:layout_constraintTop_toBottomOf="@+id/BackBtn" />
 
                 <ImageView
-                    android:id="@+id/Pinpong"
-                    android:layout_width="290dp"
+                    android:id="@+id/PicItem"
+                    android:layout_width="350dp"
                     android:layout_height="290dp"
                     android:layout_margin="16dp"
                     app:layout_constraintBottom_toBottomOf="@+id/view2"
@@ -130,11 +130,11 @@
                     android:id="@+id/textcalificacion"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/black"
                     android:layout_marginStart="8dp"
+                    android:text="4.5"
 
 
-                    android:text="4.5" />
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:id="@+id/textRating"
@@ -174,7 +174,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="16dp"
                     android:orientation="horizontal">
 
                     <TextView
@@ -190,6 +190,7 @@
                         android:id="@+id/textHora"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+
                         android:layout_marginLeft="16dp"
                         android:layout_weight="1"
                         android:text="1 P.M - 6 P.M."
@@ -198,14 +199,15 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="16dp"
                     android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/textUbicacion"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_marginLeft="16dp"
+
                         android:layout_weight="1"
                         android:text="Ubicacion: "
                         android:textColor="@color/black" />
@@ -217,13 +219,14 @@
                         android:layout_marginLeft="16dp"
                         android:layout_weight="1"
                         android:text="Bloque D"
-                        android:textColor="@color/black" />
+                        android:textColor="@color/black"
+                        android:visibility="visible" />
                 </LinearLayout>
 
             </LinearLayout>
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button"
+                android:id="@+id/addreservaBtn"
                 style="@android:style/Widget.Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
