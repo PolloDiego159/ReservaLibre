@@ -42,6 +42,18 @@
             android:label="IntentoVacio"
             />
 
+        <activity
+            android:name=".Activity.Admin"
+            android:exported="true"
+            android:label="IntentoVacio"
+            />
+
+        <activity
+            android:name=".Activity.Adicion"
+            android:exported="true"
+            android:label="IntentoVacio"
+            />
+
 
     </application>
 

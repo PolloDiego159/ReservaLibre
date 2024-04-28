@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/BackBtnr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            app:srcCompat="@drawable/arrow" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Agregar elemento"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <EditText
+            android:id="@+id/et_codigo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Código del elemento"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/et_nombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre del elemento"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/et_descripcion"
+            android:layout_width="412dp"
+            android:layout_height="wrap_content"
+            android:hint="Descripción del elemento"
+            android:inputType="textMultiLine" />
+
+        <Button
+            android:id="@+id/btn_subir_imagen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Subir imagen" />
+
+        <EditText
+            android:id="@+id/et_ubicacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ubicación del elemento"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/et_horario_prestamo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Horario de préstamo (formato HH:MM)"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/btn_guardar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guardar elemento" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Préstamo de elemento"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_agregar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Agregar elemento"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout0"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <EditText
+            android:id="@+id/re_codigo_elemento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Código del elemento"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/re_fecha_prestamo"
+            android:layout_width="410dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="16dp"
+            android:hint="Fecha de préstamo (formato DD/MM/AAAA)"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/re_hora_prestamo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Hora de préstamo (formato HH:MM)"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/btn_reserva"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reservar" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="128dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/btn_agregar"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
+
+        <EditText
+            android:id="@+id/de_codigo_elemento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Código del elemento"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/de_fecha_prestamo"
+            android:layout_width="410dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="16dp"
+            android:hint="Fecha de devolucion  (formato DD/MM/AAAA)"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/de_hora_prestamo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Hora de devolucion (formato HH:MM)"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/btn_actualizar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Actualizar" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
