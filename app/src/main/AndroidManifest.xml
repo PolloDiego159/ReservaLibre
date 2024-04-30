@@ -54,6 +54,12 @@
             android:label="IntentoVacio"
             />
 
+        <activity
+            android:name=".Activity.Perfil"
+            android:exported="true"
+            android:label="IntentoVacio"
+            />
+
 
     </application>
 
