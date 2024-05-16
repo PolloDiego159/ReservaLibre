@@ -1,4 +1,5 @@
 package com.example.intentovacio.Activity;
+
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -7,84 +8,84 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
+public class bdd extends SQLiteOpenHelper {
 
-class bdd  extends SQLiteOpenHelper{
+    private Context context;
+    private static final String DATABASE_NAME = "Basedd_ul.db";
+    private static final int DATABASE_VERSION = 1;
 
-    private Context context ;
-    private static final  String DATABESE_NAME ="Basedd_ul.db";
-    private static final  int DATABESE_version =1;
+    private static final String NOMBRE_TABLA_USUARIO = "Usuario";
+    private static final String COLUMNA_ID_USUARIO = "Id_usuario";
+    private static final String COLUMNA_CORREO = "Correo";
+    private static final String COLUMNA_CLAVE = "clave";
+    private static final String COLUMNA_NUMERO = "numero";
 
-    private static final  String Nombre_tabla ="Usuario";
-    private static final  String  COLUMNA_ID ="Id_usuario";
-    private static final  String  COLUMNA_CORREO ="Correo";
+    private static final String NOMBRE_TABLA_STOCK = "stock";
+    private static final String COLUMNA_ID_STOCK = "Id_stock";
+    private static final String COLUMNA_NOMBRE = "Nobj";
 
-    private static final  String  COLUMNA_CLAVE ="clave";
-    private static final  String  COLUMNA_NUMERO ="numero";
-
-    private static final String  Nombre_tabla_s ="stock";
-    private static final String  Columna_Id_s ="Id_stock";
-
-    private static final  String  COLUMNA_NOMBRE ="Nobj";
-
-
-
-
-
+    private static final String NOMBRE_TABLA_RESERVAS = "reservas";
+    private static final String COLUMNA_ID_RESERVA = "Id_reserva";
+    private static final String COLUMNA_TITULO_RESERVA = "titulo";
+    private static final String COLUMNA_CODIGO_RESERVA = "codigo";
 
     public bdd(@Nullable Context context) {
-        super(context, DATABESE_NAME, null,DATABESE_version );
+        super(context, DATABASE_NAME, null, DATABASE_VERSION);
         this.context = context;
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String query = "CREATE TABLE " + Nombre_tabla +
-                "(" + COLUMNA_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+        String createTableUsuario = "CREATE TABLE " + NOMBRE_TABLA_USUARIO + " (" +
+                COLUMNA_ID_USUARIO + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 COLUMNA_CORREO + " TEXT, " +
                 COLUMNA_NUMERO + " INT, " +
                 COLUMNA_CLAVE + " TEXT)";
-        db.execSQL(query);
+        db.execSQL(createTableUsuario);
 
-        String stock = "CREATE TABLE " + Nombre_tabla_s +
-                "(" +  Columna_Id_s + "INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                COLUMNA_NOMBRE  + " TEXT)";
-        db.execSQL(stock);
+        String createTableStock = "CREATE TABLE " + NOMBRE_TABLA_STOCK + " (" +
+                COLUMNA_ID_STOCK + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                COLUMNA_NOMBRE + " TEXT)";
+        db.execSQL(createTableStock);
 
-
+        String createTableReservas = "CREATE TABLE " + NOMBRE_TABLA_RESERVAS + " (" +
+                COLUMNA_ID_RESERVA + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                COLUMNA_TITULO_RESERVA + " TEXT, " +
+                COLUMNA_CODIGO_RESERVA + " INTEGER)";
+        db.execSQL(createTableReservas);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS " + Nombre_tabla);
+        db.execSQL("DROP TABLE IF EXISTS " + NOMBRE_TABLA_USUARIO);
+        db.execSQL("DROP TABLE IF EXISTS " + NOMBRE_TABLA_STOCK);
+        db.execSQL("DROP TABLE IF EXISTS " + NOMBRE_TABLA_RESERVAS);
         onCreate(db);
     }
-    void añadir_usuario (String correo , String clave ){
+
+    public void anadirUsuario(String correo, String clave) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
-
         cv.put(COLUMNA_CORREO, correo);
         cv.put(COLUMNA_CLAVE, clave);
-        long result = db.insert(Nombre_tabla,null,cv);
-        if (result == -1){
-            Toast.makeText(context, "fallo :(", Toast.LENGTH_SHORT).show();
+        long result = db.insert(NOMBRE_TABLA_USUARIO, null, cv);
+        if (result == -1) {
+            Toast.makeText(context, "Fallo :(", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(context, "Usuario añadido", Toast.LENGTH_SHORT).show();
         }
-        else {
-            Toast.makeText(context, "insert realizado", Toast.LENGTH_SHORT).show();
-        }
-
     }
-    void añadir_Stock (String obj ){
-        SQLiteDatabase db2 = this.getWritableDatabase();
-        ContentValues cv2 = new ContentValues();
 
-        cv2.put(COLUMNA_NOMBRE, obj);
-        long result = db2.insert(Nombre_tabla_s,null,cv2);
-        if (result == -1){
-            Toast.makeText(context, "fallo :(", Toast.LENGTH_SHORT).show();
+    public void anadirReserva(String titulo, int codigo) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put(COLUMNA_TITULO_RESERVA, titulo);
+        cv.put(COLUMNA_CODIGO_RESERVA, codigo);
+        long result = db.insert(NOMBRE_TABLA_RESERVAS, null, cv);
+        if (result == -1) {
+            Toast.makeText(context, "Fallo :(", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(context, "Reserva realizada", Toast.LENGTH_SHORT).show();
         }
-        else {
-            Toast.makeText(context, "insert realizado", Toast.LENGTH_SHORT).show();
-        }
-
     }
 }
