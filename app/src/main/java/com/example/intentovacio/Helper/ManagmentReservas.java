@@ -13,6 +13,7 @@ import java.util.Random;
 
 public class ManagmentReservas {
     private Context context;
+    private String hola= "hola";
     private TinyDB tinyDB;
     private bdd myDB;
 
