@@ -71,12 +71,13 @@
             android:layout_marginLeft="5dp"/>
 
         <TextView
+            android:id="@+id/correo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="AMONGUS"
             android:layout_marginLeft="25dp"
-            android:textSize="18dp"
-            android:textColor="@color/black"/>
+            android:text="algo@unilibre.edu.co"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
         
         <View
             android:layout_width="match_parent"
@@ -116,12 +117,13 @@
             android:layout_marginLeft="5dp"/>
 
         <TextView
+            android:id="@+id/celular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="3209730340"
             android:layout_marginLeft="25dp"
-            android:textSize="18dp"
-            android:textColor="@color/black"/>
+            android:text="3209730340"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
 
         <View
             android:layout_width="match_parent"
@@ -161,12 +163,13 @@
             android:layout_marginLeft="5dp"/>
 
         <TextView
+            android:id="@+id/codigo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Llamame baby"
             android:layout_marginLeft="25dp"
-            android:textSize="18dp"
-            android:textColor="@color/black"/>
+            android:text="066221064"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
 
         <View
             android:layout_width="match_parent"
@@ -199,12 +202,13 @@
             android:layout_marginLeft="5dp"/>
 
         <TextView
+            android:id="@+id/carrera"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ingenieria"
             android:layout_marginLeft="25dp"
-            android:textSize="18dp"
-            android:textColor="@color/black"/>
+            android:text="Ingenieria"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
         <View
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
