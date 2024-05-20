@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.intentovacio.Adapter.ListAdapter;
 import com.example.intentovacio.Domain.ListDomain;
-import com.example.intentovacio.Helper.ManagmentReservas;
 import com.example.intentovacio.R;
 
 import java.util.ArrayList;

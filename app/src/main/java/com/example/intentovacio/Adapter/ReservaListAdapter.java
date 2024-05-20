@@ -14,19 +14,19 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.GranularRoundedCorners;
 import com.example.intentovacio.Domain.ListDomain;
 import com.example.intentovacio.Helper.ChangeCodeItemsListener;
-import com.example.intentovacio.Helper.ManagmentReservas;
+
 import com.example.intentovacio.R;
 
 import java.util.ArrayList;
 
 public class ReservaListAdapter extends RecyclerView.Adapter<ReservaListAdapter.ViewHolder> {
     ArrayList<ListDomain> listItemSelected;
-    private ManagmentReservas managmentReservas;
+
     ChangeCodeItemsListener changeCodeItemsListener;
 
     public ReservaListAdapter(ArrayList<ListDomain> listItemSelected, Context context, ChangeCodeItemsListener changeCodeItemsListener) {
         this.listItemSelected = listItemSelected;
-        managmentReservas=new ManagmentReservas(context);
+
         this.changeCodeItemsListener = changeCodeItemsListener;
     }
 
