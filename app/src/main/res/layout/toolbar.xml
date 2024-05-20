@@ -1,41 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <LinearLayout
+        android:id="@+id/linear_ll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:id="@+id/linear_ll"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_arrow_back"
-            android:layout_alignParentLeft="true"/>
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
 
         <TextView
-            android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="Ajustes de cuenta"
-            android:textSize="16dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
             android:gravity="center"
-            android:textStyle="bold"
+            android:text="Ajustes de cuenta"
             android:textColor="@android:color/black"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Cerrar sesión"
-            android:textColor="@color/red"
-            android:layout_alignParentRight="true"
-            android:textStyle="normal"
-            android:textSize="15dp"
-            />
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:allowUndo="false"
+            android:backgroundTint="#FFFFFF"
+            android:text="Cerrar Sesion"
+            android:textColor="#FF0000" />
 
     </LinearLayout>
     
@@ -46,5 +42,5 @@
         android:layout_below="@+id/linear_ll"
         android:paddingRight="8dp"
         android:paddingLeft="8dp"/>
-    
+
 </RelativeLayout>
