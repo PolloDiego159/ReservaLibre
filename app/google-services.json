@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "750604440338",
+    "project_id": "app123-71fc5",
+    "storage_bucket": "app123-71fc5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:750604440338:android:caef1af53f9724781859cb",
+        "android_client_info": {
+          "package_name": "com.example.intentovacio"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDj5lTJzymemf35unRyC850zxOD-p4wK3w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
