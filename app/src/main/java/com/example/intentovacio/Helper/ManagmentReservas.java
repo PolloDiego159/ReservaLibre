@@ -3,7 +3,6 @@ package com.example.intentovacio.Helper;
 import android.content.Context;
 import android.widget.Toast;
 
-import com.example.intentovacio.Activity.bdd;
 import com.example.intentovacio.Domain.ListDomain;
 
 import java.util.ArrayList;
@@ -15,12 +14,12 @@ public class ManagmentReservas {
     private Context context;
     private String hola= "hola";
     private TinyDB tinyDB;
-    private bdd myDB;
+
 
     public ManagmentReservas(Context context) {
         this.context = context;
         this.tinyDB = new TinyDB(context);
-        this.myDB = new bdd(context);
+
     }
 
     public void insertFood(ListDomain item) {
@@ -44,7 +43,6 @@ public class ManagmentReservas {
             listPop.add(item);
         }
         tinyDB.putListObject("Reservas", listPop);
-        myDB.anadirReserva(item.getTitle(), item.getCode()); // Añadir reserva a la base de datos
         Toast.makeText(context, "Reserva realizada", Toast.LENGTH_SHORT).show();
     }
 
