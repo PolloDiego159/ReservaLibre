@@ -29,13 +29,12 @@ public class MainActivity extends AppCompatActivity {
 
     private void bottom_navigation() {
         LinearLayout homeBtn=findViewById(R.id.Home);
-        LinearLayout reservasBtn=findViewById(R.id.Reservas);
+
         //LinearLayout historialBtn=findViewById(R.id.Historial);
         //LinearLayout perfilBtn=findViewById(R.id.Perfil);
 
         homeBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, MainActivity.class)));
 
-        reservasBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, Reservas.class)));
 
 
     }
