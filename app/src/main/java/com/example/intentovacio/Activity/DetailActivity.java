@@ -1,21 +1,16 @@
 package com.example.intentovacio.Activity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.bumptech.glide.Glide;
 import com.example.intentovacio.Domain.ListDomain;
 import com.example.intentovacio.Helper.ManagmentReservas;
 import com.example.intentovacio.R;
-
-import java.util.ArrayList;
 
 public class DetailActivity extends AppCompatActivity {
     private Button addreservaBtn;
@@ -30,19 +25,15 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        managmentReservas =new ManagmentReservas(this);
+        managmentReservas = new ManagmentReservas(this);
 
         initView();
         getBundle();
-
     }
 
-
-
-
     private void getBundle() {
-        object=(ListDomain) getIntent().getSerializableExtra("object");
-        int drawableResourceId= this.getResources().getIdentifier(object.getPicUrl(), "drawable", this.getPackageName());
+        object = (ListDomain) getIntent().getSerializableExtra("object");
+        int drawableResourceId = this.getResources().getIdentifier(object.getPicUrl(), "drawable", this.getPackageName());
         Glide.with(this)
                 .load(drawableResourceId)
                 .into(picItem);
@@ -59,20 +50,19 @@ public class DetailActivity extends AppCompatActivity {
         });
 
         backBtn.setOnClickListener(v -> {
-            //startActivity(new Intent(DetailActivity.this, MainActivity.class));
             finish();
         });
     }
 
     private void initView() {
-        addreservaBtn=findViewById(R.id.addreservaBtn);
-        titleTxt=findViewById(R.id.textTitulo);
-        estadoTxt=findViewById(R.id.textEstado);
-        descriptionTxt=findViewById(R.id.textDescription);
-        picItem=findViewById(R.id.PicItem);
-        scoreTxt=findViewById(R.id.textcalificacion);
-        horarioTxt=findViewById(R.id.textHora);
-        ubicacionTxt=findViewById(R.id.textLugar);
-        backBtn=findViewById(R.id.BackBtn);
+        addreservaBtn = findViewById(R.id.addreservaBtn);
+        titleTxt = findViewById(R.id.textTitulo);
+        estadoTxt = findViewById(R.id.textEstado);
+        descriptionTxt = findViewById(R.id.textDescription);
+        picItem = findViewById(R.id.PicItem);
+        scoreTxt = findViewById(R.id.textcalificacion);
+        horarioTxt = findViewById(R.id.textHora);
+        ubicacionTxt = findViewById(R.id.textLugar);
+        backBtn = findViewById(R.id.BackBtn);
     }
 }

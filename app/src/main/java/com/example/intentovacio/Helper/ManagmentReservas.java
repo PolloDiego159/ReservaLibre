@@ -44,7 +44,10 @@ public class ManagmentReservas {
             listPop.add(item);
         }
         tinyDB.putListObject("Reservas", listPop);
-        myDB.anadirReserva(item.getTitle(), item.getCode()); // Añadir reserva a la base de datos
+
+        // Añadir reserva a la base de datos
+        myDB.anadirReserva(item.getTitle(), item.getCode());
+
         Toast.makeText(context, "Reserva realizada", Toast.LENGTH_SHORT).show();
     }
 

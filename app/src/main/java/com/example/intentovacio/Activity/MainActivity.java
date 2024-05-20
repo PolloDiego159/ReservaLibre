@@ -56,4 +56,10 @@ public class MainActivity extends AppCompatActivity {
         adapterList=new ListAdapter(items);
         recyclerViewList.setAdapter(adapterList);
     }
+
+    public void irPerfil(View view){
+        Intent i = new Intent(this, Perfil.class);
+        startActivity(i);
+    }
+
 }

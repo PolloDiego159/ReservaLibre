@@ -162,7 +162,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/imagebar"
+                        android:id="@+id/Imagebar1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -171,7 +171,7 @@
                         app:srcCompat="@drawable/btn_2" />
 
                     <TextView
-                        android:id="@+id/Botton"
+                        android:id="@+id/Button1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
@@ -189,7 +189,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/imagebar"
+                        android:id="@+id/Imagebar2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -198,7 +198,7 @@
                         app:srcCompat="@drawable/history" />
 
                     <TextView
-                        android:id="@+id/Botton"
+                        android:id="@+id/Button2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
@@ -216,7 +216,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/imagebar"
+                        android:id="@+id/Imagebar3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -225,11 +225,12 @@
                         app:srcCompat="@drawable/btn_4" />
 
                     <TextView
-                        android:id="@+id/Botton"
+                        android:id="@+id/Button3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
 
+                        android:onClick="irPerfil"
                         android:text="Perfil"
                         android:textAlignment="center"
                         android:textColor="#959595" />
