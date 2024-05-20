@@ -15,13 +15,13 @@ import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.intentovacio.Helper.ChangeCodeItemsListener;
-
+import com.example.intentovacio.Helper.ManagmentReservas;
 import com.example.intentovacio.R;
 
 public class Reservas extends AppCompatActivity {
     private RecyclerView.Adapter adapter;
     private RecyclerView recyclerView;
-
+    private ManagmentReservas managmentReservas;
 
     private TextView titulo, code;
 
@@ -33,7 +33,7 @@ public class Reservas extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reservas);
 
-
+        managmentReservas = new ManagmentReservas(this);
 
         initView();
         setvariable();

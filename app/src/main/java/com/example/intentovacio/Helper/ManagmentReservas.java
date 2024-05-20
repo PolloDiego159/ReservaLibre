@@ -1,12 +1,13 @@
-/*
 package com.example.intentovacio.Helper;
 
 import android.content.Context;
 import android.widget.Toast;
 
+import com.example.intentovacio.Activity.bdd;
 import com.example.intentovacio.Domain.ListDomain;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 
@@ -35,7 +36,7 @@ public class ManagmentReservas {
                 break;
             }
         }
-
+        */
 
         if (existAlready) {
             listPop.get(n.nextInt(4) + 1).setCode(item.getCode());
@@ -61,4 +62,3 @@ public class ManagmentReservas {
         changeCodeItemsListener.change();
     }
 }
-*/

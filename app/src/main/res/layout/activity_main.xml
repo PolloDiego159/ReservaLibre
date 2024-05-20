@@ -131,7 +131,7 @@
                     android:id="@+id/Home"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="0.25"
+                    android:layout_weight="0.30"
                     android:orientation="vertical">
 
                     <ImageView
@@ -155,68 +155,14 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/Reservas"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.25"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/imagebar"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_margin="4dp"
-                        android:layout_weight="1"
-                        app:srcCompat="@drawable/btn_2" />
-
-                    <TextView
-                        android:id="@+id/Botton"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-
-                        android:text="Mis reservas"
-                        android:textAlignment="center"
-                        android:textColor="#959595" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/Historial"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.25"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/imagebar"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_margin="4dp"
-                        android:layout_weight="1"
-                        app:srcCompat="@drawable/history" />
-
-                    <TextView
-                        android:id="@+id/Botton"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-
-                        android:text="Historial"
-                        android:textAlignment="center"
-                        android:textColor="#959595" />
-                </LinearLayout>
-
-                <LinearLayout
                     android:id="@+id/Perfil"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="0.25"
+                    android:layout_weight="0.30"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/imagebar"
+                        android:id="@+id/Imagebar3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -225,11 +171,12 @@
                         app:srcCompat="@drawable/btn_4" />
 
                     <TextView
-                        android:id="@+id/Botton"
+                        android:id="@+id/Button3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
 
+                        android:onClick="irPerfil"
                         android:text="Perfil"
                         android:textAlignment="center"
                         android:textColor="#959595" />

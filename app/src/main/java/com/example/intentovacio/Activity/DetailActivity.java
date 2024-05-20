@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.bumptech.glide.Glide;
 import com.example.intentovacio.Domain.ListDomain;
-
+import com.example.intentovacio.Helper.ManagmentReservas;
 import com.example.intentovacio.R;
 
 import java.util.ArrayList;
@@ -23,14 +23,14 @@ public class DetailActivity extends AppCompatActivity {
     private ImageView picItem, backBtn;
     private ListDomain object;
     private int code;
-
+    private ManagmentReservas managmentReservas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-
+        managmentReservas =new ManagmentReservas(this);
 
         initView();
         getBundle();
@@ -55,7 +55,7 @@ public class DetailActivity extends AppCompatActivity {
 
         addreservaBtn.setOnClickListener(v -> {
             object.setCode(code);
-
+            managmentReservas.insertFood(object);
         });
 
         backBtn.setOnClickListener(v -> {
