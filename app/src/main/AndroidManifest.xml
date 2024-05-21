@@ -17,7 +17,7 @@
 
             android:name=".Activity.Login"
             android:exported="true"
-            android:label="IntentoVacio"
+            android:label="ReservaLibre"
             android:taskAffinity=".ActivityLoginTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
