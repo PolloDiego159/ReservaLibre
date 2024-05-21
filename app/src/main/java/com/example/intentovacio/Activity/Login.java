@@ -1,6 +1,8 @@
 package com.example.intentovacio.Activity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -35,6 +37,9 @@ public class Login extends AppCompatActivity {
         correo = findViewById(R.id.correo);
         clave = findViewById(R.id.clave);
 
+        SharedPreferences credenciales = getSharedPreferences("datos", Context.MODE_PRIVATE);
+        correo.setText(credenciales.getString("email",""));
+
         material = findViewById(R.id.material);
 
         material.setOnClickListener(new View.OnClickListener() {
@@ -46,7 +51,17 @@ public class Login extends AppCompatActivity {
 
 
 
+
     }
+
+    public void guardar(){
+        SharedPreferences creden = getSharedPreferences("datos", Context.MODE_PRIVATE);
+        SharedPreferences.Editor Obj_editor = creden.edit();
+        Obj_editor.putString("mail", correo.getText().toString());
+        Obj_editor.commit();
+        finish();
+    }
+
     private void iniciosesion(String correo, String clave, boolean ad){
 
 
