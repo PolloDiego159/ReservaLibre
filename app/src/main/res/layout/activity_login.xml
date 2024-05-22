@@ -99,20 +99,24 @@
                 android:id="@+id/clave"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableEnd="@drawable/password_icon"
                 android:inputType="textPassword" />
+
+            <CheckBox
+                android:id="@+id/checkBoxShowPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mostrar contraseña" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <CheckBox
+                    android:id="@+id/checkBoxRememberMe"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:alpha="0.7"
                     android:text="Recordarme" />
-
+                />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -120,8 +124,6 @@
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:text="Olvide mi contraseña" />
-
-
             </RelativeLayout>
 
             <View
@@ -133,10 +135,6 @@
                 android:layout_width="360dp"
                 android:layout_height="wrap_content"
                 android:text="Iniciar Sesion" />
-
-
         </LinearLayout>
-
     </androidx.cardview.widget.CardView>
-
 </RelativeLayout>
