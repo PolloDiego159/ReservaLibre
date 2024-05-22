@@ -22,6 +22,13 @@ public class Perfil extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil);
-
+    }
+    public void irInicio(View view){
+        Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
+    }
+    public void irLogin(View view){
+        Intent i = new Intent(this, Login.class);
+        startActivity(i);
     }
 }
