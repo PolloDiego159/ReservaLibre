@@ -5,24 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Préstamo de elemento"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btn_agregar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Agregar elemento"
-        app:layout_constraintBottom_toBottomOf="parent" />
-
     <LinearLayout
         android:id="@+id/linearLayout0"
         android:layout_width="0dp"
@@ -58,7 +40,8 @@
             android:id="@+id/btn_reserva"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Reservar" />
+            android:text="Reservar"
+            android:onClick="Reservar"/>
 
     </LinearLayout>
 
@@ -66,10 +49,8 @@
         android:id="@+id/linearLayout1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="128dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/btn_agregar"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout0">
 
         <EditText
             android:id="@+id/de_codigo_elemento"
@@ -102,5 +83,16 @@
             android:text="Actualizar" />
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Préstamo de elemento"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

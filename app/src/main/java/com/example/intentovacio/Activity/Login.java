@@ -74,10 +74,10 @@ public class Login extends AppCompatActivity {
             if (clave.equals(clave1)){
                 if(admin){
                     startActivity(new Intent(Login.this, Admin.class));
-                    Toast.makeText(this, "Aprovado", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Aprobado", Toast.LENGTH_SHORT).show();
                 }else{
                     startActivity(new Intent(Login.this, MainActivity.class));
-                    Toast.makeText(this, "Aprovado", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Aprobado", Toast.LENGTH_SHORT).show();
                 }
 
             }else{
