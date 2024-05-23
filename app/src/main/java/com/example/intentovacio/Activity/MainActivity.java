@@ -41,11 +41,11 @@ public class MainActivity extends AppCompatActivity {
     private void initRecyclerview() {
         ArrayList<ListDomain> items= new ArrayList<>();
         //aca debe de estar la implementacion de base de datos
-        items.add(new ListDomain("Raquetas de Pin-Pong", "Acceso a una mesa, dos raquetas, una malla resistente y un par de pelotas de pinpon. Desafia tus amigos, practica tu tecnica y diviertete en tu ambiente universitario. Reserva en base a disponibilidad","Stock:3","Disponible", "pinpong", "4.5","1 P.M.-7 P.m.", "B"));
-        items.add(new ListDomain("Balon Futbol", "sdf","Stock:5","Disponible", "futbol", "3.0","1 P.M.-7 P.m.", "Bloque"));
-        items.add(new ListDomain("Rummi-Q", "dfg","Stock:2","Disponible", "rummiq", "4.0","1 P.M.-7 P.m.", "Bloque"));
-        items.add(new ListDomain("Ps5", "fgh", "Stock:2","Disponible", "ps5", "2.2","1 P.M.-7 P.m.", "Bloque"));
-        items.add(new ListDomain("Balon Futbol Americano", "ghj","Stock:5","Disponible", "futa", "4.3","1 P.M.-7 P.m.", "Bloque"));
+        items.add(new ListDomain("Raquetas de Pin-Pong", "Acceso a una mesa, dos raquetas, una malla resistente y un par de pelotas de pinpon. Desafia tus amigos, practica tu tecnica y diviertete en tu ambiente universitario. Reserva en base a disponibilidad","Stock:3","Disponible", "pinpong", "4.5","1 P.M.-7 P.m.", "Bloque D"));
+        items.add(new ListDomain("Balon Baloncesto", "Acceso a un balón de baloncesto oficial. Juega con tus amigos, mejora tus tiros y disfruta del deporte en tu ambiente universitario. Reserva en base a disponibilidad.","Stock:10","Disponible", "baloncesto", "4.0","1 P.M.-7 P.m.", "PoliDeportivo"));
+        items.add(new ListDomain("Balon Voleibol", "Acceso a un balón de voleibol de alta calidad. Organiza partidos con tus amigos, mejora tus habilidades y disfruta del deporte en tu ambiente universitario. Reserva en base a disponibilidad.","Stock:10","Disponible", "voley", "3.5","8 A.M.-7 P.m.", "PoliDeportivo"));
+        items.add(new ListDomain("Ps5", "Ofrece una experiencia de juego increíblemente inmersiva y realista, gracias a su potente procesador, gráficos de última generación y almacenamiento SSD ultrarrápido. Con la PS5, podrás disfrutar de juegos exclusivos como Horizon Forbidden West, Ratchet & Clank: Rift Apart y Gran Turismo 7, que te transportarán a mundos increíbles y te harán vivir aventuras inolvidables.", "Stock:2","Disponible", "ps5", "4.2","1 P.M.-7 P.m.", "Bloque C"));
+        items.add(new ListDomain("Balon Futbol", "Acceso a un balón de fútbol de alta calidad. Organiza partidos con tus amigos, practica tus habilidades y disfruta del deporte en tu ambiente universitario. Reserva en base a disponibilidad.","Stock:10","Disponible", "futbol", "4.3","8 A.M.-7 P.m.", "Zonas v"));
 
         recyclerViewList=findViewById(R.id.view1);
         recyclerViewList.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
