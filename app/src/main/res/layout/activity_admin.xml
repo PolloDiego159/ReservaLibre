@@ -10,7 +10,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@+id/textView2">
+        app:layout_constraintTop_toBottomOf="@+id/correoper">
 
         <EditText
             android:id="@+id/re_codigo_estudiantes"
@@ -85,7 +85,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/correoper"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Préstamo de elemento"
